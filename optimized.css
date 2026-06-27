@@ -1,0 +1,2750 @@
+/* DESIGN.md Color Variables */
+:root {
+  --surface: #0f1415;
+  --surface-dim: #0f1415;
+  --surface-bright: #353a3b;
+  --surface-container-lowest: #0a0f10;
+  --surface-container-low: #181c1d;
+  --surface-container: #1c2021;
+  --surface-container-high: #262b2c;
+  --surface-container-highest: #313637;
+  
+  --on-surface: #dfe3e4;
+  --on-surface-variant: #cfc6ae;
+  
+  --primary: #ffeebb;
+  --on-primary: #3b2f00;
+  --primary-container: #f4d03f; /* Safety Yellow */
+  --on-primary-container: #6c5900;
+  
+  --secondary: #c2c8c2;
+  --on-secondary: #2c322d;
+  --secondary-container: #474d48;
+  --on-secondary-container: #b7bdb7;
+  
+  --tertiary: #e2f3e6;
+  --on-tertiary: #25342b;
+  --tertiary-container: #c6d7ca; /* Pine Surface - Using surface-container for cards generally per design feel, but added here */
+  
+  --error: #ffb4ab;
+  
+  /* Typography */
+  --font-family: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --unit: 8px;
+  --gutter: 24px;
+  --margin-desktop: 48px;
+  --margin-mobile: 16px;
+  --container-max: 1280px;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-default: 1rem; /* 16px */
+  --radius-md: 1.5rem;    /* 24px for major cards */
+  --radius-lg: 2rem;
+  --radius-pill: 9999px;
+}
+
+/* Global Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--surface);
+    color: var(--on-surface);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    padding-top:100px;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Typography Scale */
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--on-surface);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--primary-container);
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--on-surface-variant);
+    margin-bottom: 32px;
+}
+
+.kicker {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary-container);
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Layout Classes */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--margin-desktop);
+}
+
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-spacer {
+    height: 48px;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-pill);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-container);
+    color: #221b00; /* Deep charcoal forest text */
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 16px rgba(244, 208, 63, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--on-surface);
+    border: 1px solid var(--surface-container-highest);
+}
+
+.btn-outline:hover {
+    background-color: var(--surface-container);
+}
+
+.btn-circle, .btn-circle-small {
+    background-color: var(--primary-container);
+    color: #221b00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.btn-circle {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+}
+
+.btn-circle-small {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    background-color: var(--surface-container-highest);
+    color: var(--on-surface);
+}
+
+.btn-circle-small:hover {
+    background-color: var(--primary-container);
+    color: #221b00;
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: var(--on-surface);
+    cursor: pointer;
+    display: flex;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 24px var(--margin-desktop);
+
+    background: rgba(15,20,21,0.9);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--on-surface);
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.15);
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--on-surface-variant);
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 6px; /* Adjust spacing between text and underline */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--on-surface);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Creates the aesthetic underline */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-container);
+    transition: width 0.3s ease-in-out; /* This creates the smooth slide effect */
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid var(--primary-container);
+    padding-bottom: 4px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.login-link {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* The magic property for full-bleed backgrounds */
+    pointer-events: none; /* Prevents users from accidentally clicking or pausing the video */
+}
+
+.hero-bg .bg-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+   background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2; /* Sits safely above the video and the overlay */
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--on-surface-variant);
+    margin: 24px 0 32px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* Cards System */
+.card {
+    background-color: var(--surface-container);
+    border-radius: var(--radius-md); /* 24px */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(15, 20, 21, 0.1); /* Soft diffused forest mist */
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+.card-img-wrapper {
+    position: relative;
+}
+
+.tags {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+}
+
+.tag-red { background-color: rgba(147, 0, 10, 0.8); color: #ffdad6; }
+.tag-dark { background-color: rgba(28, 32, 33, 0.8); color: var(--on-surface); }
+.tag-light { background-color: rgba(223, 227, 228, 0.9); color: var(--surface); }
+
+/* Expeditions Section */
+.expeditions-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--gutter);
+    margin-top: 32px;
+}
+
+.view-all {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-container);
+    letter-spacing: 0.05em;
+}
+
+.featured-img img {
+    height: 300px;
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.featured-card p {
+    color: var(--on-surface-variant);
+    margin-bottom: 24px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 16px;
+}
+
+.departure {
+    display: flex;
+    flex-direction: column;
+}
+
+.departure .label {
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--on-surface-variant);
+}
+
+.departure .date {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.secondary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter);
+}
+
+.small-card .card-img-wrapper img {
+    height: 180px;
+}
+
+.small-card .card-content {
+    padding: 16px 20px;
+}
+
+.small-card h4 {
+    margin-bottom: 12px;
+}
+
+.small-footer {
+    border-top: none;
+    padding-top: 0;
+}
+
+.stats {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+}
+
+/* Mission Section */
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.mission-text p {
+    color: var(--on-surface-variant);
+    margin-bottom: 16px;
+}
+
+.mission-features {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.feature {
+    display: flex;
+    gap: 16px;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--surface-container-high);
+    border-radius: var(--radius-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-container);
+    flex-shrink: 0;
+}
+
+.feature-text h4 {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.feature-text p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.mission-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.mission-img {
+    height: 600px;
+    border-radius: var(--radius-md);
+}
+
+.floating-stats-card {
+    position: absolute;
+    bottom: 32px;
+    left: -20px; /* Overlap effect */
+    background-color: var(--surface-container-high);
+    padding: 32px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 24px 48px rgba(15, 20, 21, 0.4);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.floating-stats-card h3 {
+    color: var(--primary-container);
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+.floating-stats-card p {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--on-surface);
+}
+
+/* Reviews Section */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gutter);
+    margin-top: 48px;
+}
+
+.review-card {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Required for z-index to work */
+    z-index: 1; /* Keep normal cards at base level */
+    background-color: #ffffff; /* Ensure you have a solid background, use your var() if applicable */
+   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);/* Super smooth aesthetic easing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle default shadow *//* Default side-card state: Shrunk, dimmed, and slightly blurred */
+    transform: scale(0.88); 
+    opacity: 0.6; 
+    filter: blur(2px); /* Creates that background-focus aesthetic */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.review-card.active-center {
+    transform: scale(1.15); /* Massive scale difference */
+    opacity: 1; /* Fully visible */
+    filter: blur(0px); /* Perfectly sharp */
+    z-index: 10; /* Guaranteed top layer */
+    
+    /* Double-layered shadow for realistic 3D elevation */
+    box-shadow: 
+        0 32px 64px rgba(0, 0, 0, 0.15), /* Wide, soft ambient shadow */
+        0 12px 24px rgba(0, 0, 0, 0.10); /* Tighter, darker base shadow */
+        
+    border: 1px solid rgba(0, 0, 0, 0.03); /* Subtle edge highlight */
+}
+
+.reviews-track:hover .review-card:not(.active-center) {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+.stars {
+    color: var(--primary-container);
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    flex-grow: 1;
+    font-size: 15px;
+    color: var(--on-surface-variant);
+    margin-bottom: 32px;
+    font-style: italic;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.reviewer-info h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--on-surface);
+}
+
+.reviewer-info span {
+    font-size: 12px;
+    color: var(--on-surface-variant);
+}
+
+/* --- Mobile Responsive Layout for Reviews (iPad Mini & Smaller) --- */
+@media (max-width: 820px) {
+    .reviews-scroll-container {
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 20px;
+        padding: 20px 20px 24px 20px;
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+    }
+    
+    .reviews-scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .reviews-track {
+        display: flex;
+        gap: 16px; 
+    }
+
+    .review-card {
+        min-width: 85vw; /* Safer width, avoids right-edge clipping */
+        max-width: 85vw;
+        width: 85vw;
+        flex-shrink: 0;
+        scroll-snap-align: start; 
+        
+        transform: none;
+        opacity: 1;
+        filter: none;
+    }
+
+   .review-card.active-center {
+        transform: none; 
+        opacity: 1;
+        filter: none;
+        z-index: 10;
+    }
+}
+
+/* --- Extra compact for small phones (≤480px) --- */
+@media (max-width: 480px) {
+    .review-card {
+        min-width: 90vw; /* Snug fit for very small screens */
+        max-width: 90vw;
+        width: 90vw;
+    }
+}
+
+/* Leaders Section */
+.leaders {
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--gutter);
+    margin-top: 48px;
+}
+
+.leader-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leader-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    border: 2px solid var(--surface-container-high);
+}
+
+.leader-role {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary-container);
+    letter-spacing: 0.1em;
+    margin: 4px 0 12px 0;
+}
+
+.leader-desc {
+    font-size: 14px;
+    color: var(--on-surface-variant);
+}
+
+/* Crucial: This keeps the absolute button trapped inside the specific leader's card */
+.leader-row {
+    position: relative; 
+    display: flex;
+    flex-direction: row; /* Keeps the horizontal layout (Image Left, Text Right) */
+    align-items: center; /* Vertically centers the image and the text block perfectly */
+    gap: 32px; /* Gives that clean, aesthetic spacing between the avatar and the text */
+    padding: 32px; 
+    background-color: var(--surface-container-low, #1c2021); /* Your sleek dark card background */
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+
+.leader-image {
+    flex-shrink: 0; /* Ensures the image never gets squished by long text */
+}
+
+.leader-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensures the text is vertically centered */
+    text-align: left; /* Keeps the highly readable editorial alignment shown in your image */
+    padding-top: 16px; /* Just a tiny bit of space so it doesn't collide with the top-right button on smaller screens */
+}
+
+/* The Minimal Instagram Button */
+.insta-btn {
+    position: absolute;
+    top: 24px;   /* Snapped cleanly to the upper edge */
+    right: 24px; /* Locked to the right corner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.00); /* Very subtle button background for dark mode */
+    color: var(--on-surface-variant, #ffffff);
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
+    z-index: 10;
+}
+
+.insta-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Premium Hover Effect */
+.insta-btn:hover {
+    background-color: var(--primary-container, #e1306c); 
+    color: #ffffff;
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 8px 16px rgba(225, 48, 108, 0.2);
+}
+
+/* Footer */
+.site-footer {
+    background: rgba(18, 18, 18, 0.4); /* Semi-transparent dark overlay */
+    backdrop-filter: blur(12px); /* The frosted glass blur */
+    -webkit-backdrop-filter: blur(12px); /* For Safari support */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 0;
+    margin-top: 64px;
+}
+
+.footer-content {
+    align-items: center;
+}
+
+.footer-brand .logo {
+    margin-bottom: 8px;
+}
+
+.copyright {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: var(--on-surface-variant);
+}
+
+.footer-links a:hover {
+    color: var(--on-surface);
+}
+
+/* Footer Signature Line */
+.footer-signature {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Change to flex-start if your footer is left-aligned */
+    gap: 8px; /* Clean spacing between text and icon */
+    font-size: 13px; /* Matched exactly with your .copyright size */
+    color: var(--on-surface-variant); /* Inheriting your theme's muted color */
+    margin-top: 16px; /* Subtle spacing from other footer elements */
+}
+
+.ig-link {
+    color: var(--on-surface-variant);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ig-link:hover {
+    color: var(--on-surface); /* Inheriting your exact hover state from .footer-links */
+    transform: translateY(-2px); /* Maintains that premium subtle lift */
+}
+
+/* Mobile Responsiveness for Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stacks brand and links vertically */
+        text-align: center; /* Centers all text elements */
+        gap: 32px; /* Adds breathing space between brand info and links */
+    }
+
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Forces logo, copyright, and signature to center */
+    }
+
+    .footer-brand .logo {
+        justify-content: center; /* Keeps the logo image and text centered together */
+    }
+
+    .footer-links {
+        justify-content: center; /* Centers the row of links */
+        flex-wrap: wrap; /* Prevents links from overflowing the screen */
+        gap: 16px; /* Slightly tighter gap for mobile screens */
+    }
+}
+
+
+
+/* =============================================
+   HAMBURGER BUTTON STYLES
+   ============================================= */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1010;
+    transition: border-color 0.3s ease;
+}
+
+.hamburger:hover {
+    border-color: var(--primary-container);
+}
+
+.hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--on-surface);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-origin: center;
+}
+
+/* Animated X when open */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =============================================
+   RESPONSIVE MEDIA QUERIES — MOBILE FIRST
+   ============================================= */
+
+/* --- TABLETS & SMALL LAPTOPS (≤1024px) --- */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--gutter);
+    }
+
+    .expeditions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .mission-image-wrapper {
+        margin-top: 32px;
+    }
+
+    .mission-img {
+        height: 450px;
+        width: 100%;
+    }
+
+    .floating-stats-card {
+        left: 20px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .leaders-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-card {
+        width: calc((100% - 24px) / 2);
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding-top: 60px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .expedition-group {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+/* --- NAVBAR: TABLETS & MOBILE (≤1050px) --- */
+@media (max-width: 1050px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .navbar {
+        padding: 16px var(--margin-mobile);
+    }
+
+    /* Show hamburger, hide desktop nav */
+    .hamburger {
+        display: flex !important;
+        order: 3;
+        flex-shrink: 0;
+        margin-left: 8px;
+    }
+
+    .nav-container {
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo a {
+        display: flex;
+        align-items: center;
+        min-width: 0;
+        text-decoration: none;
+        overflow: hidden;
+    }
+
+    .logo span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(15, 20, 21, 0.97);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        flex-direction: column;
+        padding: 24px var(--margin-mobile);
+        gap: 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        box-shadow: 0 16px 32px rgba(0,0,0,0.3);
+        z-index: 1005;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 14px 0;
+        font-size: 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-links a.active {
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+        padding-bottom: 14px;
+        color: var(--primary-container);
+    }
+
+    .nav-actions {
+        display: flex !important;
+        gap: 8px !important;
+        order: 2;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .nav-actions .btn-minimal span {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .nav-actions .btn-minimal {
+        padding: 0 !important;
+        border-radius: 50% !important;
+        gap: 0 !important;
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: hidden !important;
+        font-size: 0 !important;
+    }
+}
+
+/* --- TABLETS PORTRAIT (≤768px) --- */
+@media (max-width: 768px) {
+    /* Consistent horizontal padding for all containers */
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Prevent any horizontal overflow on mobile */
+    .expeditions.container,
+    .reviews.container {
+        overflow-x: hidden;
+    }
+
+    /* Carousel wrapper breaks out of container padding for full-width scroll.
+       The scroll track's own padding provides the correct card inset. */
+    .carousel-wrapper {
+        gap: 0;
+        padding: 0;
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 60vh;
+        padding-top: 40px;
+    }
+
+    .hero h1,
+    h1 {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        margin: 16px 0 24px 0;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Typography — consistent scale */
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /* Consistent vertical section spacing */
+    .section-padding {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .section-spacer {
+        height: 24px;
+    }
+
+    /* Section headers — consistent spacing */
+    .section-header {
+        margin-bottom: 24px;
+    }
+
+    .text-center {
+        margin-bottom: 28px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .nav-arrow {
+        display: none;
+    }
+
+    /* Mission / About Us — consistent spacing */
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .mission-text p {
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+
+    .mission-features {
+        margin-top: 28px;
+        gap: 20px;
+    }
+
+    .mission-image-wrapper {
+        margin-top: 0;
+    }
+
+    .mission-img {
+        height: 320px;
+        width: 100%;
+    }
+
+    .floating-stats-card {
+        left: 16px;
+        bottom: 20px;
+        padding: 20px;
+    }
+
+    .floating-stats-card h3 {
+        font-size: 36px;
+    }
+
+    .floating-stats-card p {
+        font-size: 11px;
+    }
+
+    /* Reviews — consistent spacing */
+    .review-card {
+        width: calc(100vw - 40px);
+        max-width: calc(100vw - 40px);
+    }
+
+    .reviews-grid,
+    .leaders-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Leaders — consistent spacing */
+    .leaders-list {
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .leader-row {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+        gap: 20px;
+    }
+
+    .leader-info {
+        text-align: center;
+    }
+
+    .leader-info h4 {
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+
+    .leader-avatar {
+        width: 140px;
+        height: 140px;
+    }
+
+    .leader-desc {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .insta-btn {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 16px auto 0;
+    }
+
+    /* Footer — consistent spacing */
+    .site-footer {
+        margin-top: 40px;
+        padding: 32px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    /* Logo in nav */
+    .logo {
+        font-size: 1.15rem;
+        gap: 8px;
+    }
+
+    .logo-img {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Carousel wrapper adjusts to smaller container padding */
+    .carousel-wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
+    }
+}
+
+/* --- MOBILE PHONES (≤480px) --- */
+@media (max-width: 480px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .container {
+        padding: 0 var(--margin-mobile);
+    }
+
+    .reviews-scroll-container {
+        scroll-padding-left: 16px;
+        padding: 16px 16px 20px 16px;
+    }
+
+    .carousel-wrapper {
+        margin-left: -16px;
+        margin-right: -16px;
+        width: calc(100% + 32px);
+    }
+
+    .hero {
+        min-height: 55vh;
+        padding-top: 20px;
+    }
+
+    .hero h1,
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        margin: 12px 0 20px 0;
+    }
+
+    /* Consistent vertical rhythm */
+    .section-padding {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .section-spacer {
+        height: 16px;
+    }
+
+    .text-center {
+        margin-bottom: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .section-header {
+        margin-bottom: 20px;
+    }
+
+    /* Cards */
+    .card-content {
+        padding: 16px;
+        padding-bottom: 72px;
+    }
+
+    .small-card .card-content {
+        padding: 12px 16px;
+        padding-bottom: 56px;
+    }
+
+    .featured-img img {
+        height: 180px;
+    }
+
+    .small-card .card-img-wrapper img {
+        height: 140px;
+    }
+
+    /* Reviews */
+    .review-card {
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        min-width: calc(100vw - 32px);
+        padding: 20px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+
+    /* Leaders */
+    .leaders-list {
+        padding: 0 var(--margin-mobile);
+        gap: 16px;
+    }
+
+    .leader-row {
+        padding: 20px 16px;
+        gap: 16px;
+    }
+
+    .leader-avatar {
+        width: 110px;
+        height: 110px;
+    }
+
+    .leader-info h4 {
+        font-size: 20px;
+    }
+
+    .leader-role {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .leader-desc {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* Mission */
+    .mission-features {
+        margin-top: 24px;
+        gap: 16px;
+    }
+
+    .mission-img {
+        height: 260px;
+    }
+
+    .mission-text h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .mission-text p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .floating-stats-card {
+        padding: 16px;
+        left: 12px;
+        bottom: 12px;
+    }
+
+    .floating-stats-card h3 {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+
+    .floating-stats-card p {
+        font-size: 10px;
+        letter-spacing: 0.05em;
+    }
+
+    /* Footer */
+    .site-footer {
+        margin-top: 32px;
+        padding: 28px 0;
+    }
+
+    .footer-content {
+        gap: 16px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+
+    /* Carousel wrapper - remove old gap, handled by negative margins above */
+}
+
+/* --- VERY SMALL PHONES (≤320px) --- */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero h1,
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .section-padding {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    .section-spacer {
+        height: 8px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .review-card {
+        width: calc(100vw - 24px);
+        max-width: calc(100vw - 24px);
+        min-width: calc(100vw - 24px);
+        padding: 16px;
+    }
+
+    .reviews-scroll-container {
+        scroll-padding-left: 12px;
+        padding: 12px 12px 16px 12px;
+    }
+
+    .featured-card,
+    .small-card {
+        min-width: calc(100vw - 24px);
+        max-width: calc(100vw - 24px);
+        width: calc(100vw - 24px);
+    }
+
+    .expeditions-track {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .expeditions-scroll-container {
+        scroll-padding-left: 12px;
+    }
+
+    .leaders-list {
+        padding: 0 12px;
+    }
+
+    .leader-row {
+        padding: 16px 12px;
+    }
+
+    .leader-avatar {
+        width: 90px;
+        height: 90px;
+    }
+
+    .logo span {
+        font-size: 1rem;
+    }
+
+    .site-footer {
+        margin-top: 24px;
+        padding: 24px 0;
+    }
+
+    .carousel-wrapper {
+        margin-left: -12px;
+        margin-right: -12px;
+        width: calc(100% + 24px);
+    }
+}
+
+.expeditions-scroll{
+    display:flex;
+    gap:40px;
+    overflow:hidden;
+    scroll-behavior:smooth;
+}
+
+.expeditions-scroll.expanded{
+    overflow-x:auto;
+}
+
+.expeditions-scroll .expeditions-grid{
+    min-width:100%;
+    flex-shrink:0;
+}
+
+.routes-wrapper{
+    display:flex;
+    gap:24px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding-bottom:10px;
+}
+
+.routes-wrapper::-webkit-scrollbar{
+    height:8px;
+}
+
+.routes-wrapper::-webkit-scrollbar-thumb{
+    background:#555;
+    border-radius:20px;
+}
+
+.extra-route{
+    display:none;
+    flex-shrink:0;
+}
+
+.extra-route.show{
+    display:block;
+}
+
+.featured-card,
+.secondary-cards{
+    flex-shrink:0;
+}
+
+
+
+/* meet team ka gemini css */
+
+/* Core Styling using the Design System */
+.leaders {
+    background-color: #0f1415; /* Forest Charcoal Background */
+    color: #dfe3e4; /* Alpine White Text */
+    font-family: 'Inter', sans-serif;
+    padding: 48px 0;
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.text-center h2 {
+    font-size: 32px; /* headline-lg */
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: #dfe3e4;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 18px; /* body-lg */
+    line-height: 1.6;
+    color: #cfc6ae; /* on-surface-variant (warm off-white) */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Stack Container for Rows */
+.leaders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Gutter based spacing */
+    max-width: 1280px; /* container-max */
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Individual Leader Row Card */
+.leader-row {
+    display: flex;
+    align-items: center; /* Vertically aligns circle image with long text beautifully */
+    gap: 40px; /* Open air breathing space */
+    padding: 32px;
+    background-color: #1c2021; /* Pine Surface Container */
+    border-radius: 1.5rem; /* Organic Geometry: 24px corner radius */
+    
+    /* Forest Mists Shadow - Extra-diffused, tinted with dark secondary tone */
+    box-shadow: 0 10px 30px rgba(10, 15, 16, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle hover effect from design system rules */
+.leader-row:hover {
+    transform: scale(1.01);
+    box-shadow: 0 12px 35px rgba(231, 196, 51, 0.04); /* Very low opacity Safety Yellow tint glow */
+}
+
+/* Photo Wrapper & Circle Layout */
+.leader-image {
+    flex-shrink: 0; /* Prevents avatar compression on smaller grids */
+}
+
+.leader-avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 9999px; /* Perfect Circle */
+    border: 1px solid #313637; /* Low-contrast tone-on-tone border */
+}
+
+/* Content Panel on the Right */
+.leader-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.leader-info a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.leader-info h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #dfe3e4; /* Alpine White */
+    margin: 0 0 6px 0;
+    letter-spacing: -0.01em;
+}
+
+.leader-info h4:hover {
+    color: #ffeebb; /* Primary Highlight link glow effect */
+}
+
+/* High-priority highlights using Safety Yellow */
+.leader-role {
+    display: inline-block;
+    color: #e7c433; /* Safety Yellow Accent */
+    font-size: 14px; /* label-md */
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+/* Long detailed intros space */
+.leader-desc {
+    font-size: 16px; /* body-md */
+    line-height: 1.6; /* Open typographic rhythm */
+    letter-spacing: 0.01em;
+    color: #cfc6ae; /* High readability off-white */
+    margin: 0;
+}
+
+/* Responsive Scaling for Mobile Screens - handled in main responsive block above */
+/* reviews  */
+
+/* Carousel Wrapper and Hidden Scroll Window */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.reviews-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 20px 4px;
+    
+    /* Hide scrollbars completely */
+    -webkit-scrollbar { display: none; }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Horizontal Track Wrapper */
+.reviews-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px; /* Organic Explorer standard spacing */
+    width: 100%;
+}
+
+/* The Review Card - Dynamic Calculation */
+.review-card {
+    flex-shrink: 0;
+    /* Formula: (Total Width - Total Gaps) / Number of Cards */
+    width: calc((100% - 48px) / 3); 
+    background-color: #1c2021; /* Pine Surface */
+    border-radius: 1.5rem; /* Organic 24px Geometry */
+    padding: 32px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(10, 15, 16, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Star/Review Text Mechanics */
+.review-text-wrap {
+    position: relative;
+    max-height: 72px; 
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    margin-bottom: 12px;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfc6ae;
+    margin: 0;
+}
+
+/* Pill-Shaped Expand Button */
+.btn-expand {
+    align-self: flex-start;
+    background: transparent;
+    border: 1px solid #4c4634;
+    color: #ffeebb;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    transition: all 0.2s ease;
+}
+
+.btn-expand:hover {
+    background-color: #e7c433;
+    color: #3b2f00;
+    border-color: #e7c433;
+    transform: scale(1.02);
+}
+
+.review-card.is-expanded .review-text-wrap {
+    max-height: 400px; 
+}
+
+
+
+/* Reviewer Meta Panel */
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto; 
+    border-top: 1px solid #313637;
+    padding-top: 16px;
+}
+
+.reviewer .avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    object-fit: cover;
+}
+
+.reviewer-info h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #dfe3e4;
+    margin: 0 0 2px 0;
+}
+
+.reviewer-info span {
+    font-size: 13px;
+    color: #98907a;
+}
+
+/* Control Elements */
+.nav-arrow {
+    background-color: #1c2021;
+    color: #dfe3e4;
+    border: 1px solid #313637;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.nav-arrow:hover {
+    background-color: #e7c433;
+    color: #3b2f00;
+    border-color: #e7c433;
+}
+
+.carousel-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.page-num {
+    background: transparent;
+    border: none;
+    color: #98907a;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.page-num.active {
+    color: #e7c433;
+    transform: scale(1.2);
+}
+
+/* Swipe Indicator Base (Hidden on Desktop) */
+.swipe-indicator {
+    display: none;
+}
+
+/* --- Responsive Helpers --- */
+
+/* upcoming expeditions */
+/* 1. The Scroll Window */
+.expeditions-scroll-container {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    width: 100%; /* Strict width boundary */
+}
+
+.expeditions-scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* 2. The Track */
+.expeditions-track {
+    display: flex;
+    gap: 40px; /* Space between the complete groups/windows */
+}
+
+/* 3. The Group (The Magic Grid) */
+.expedition-group {
+    display: grid;
+    /* This divides the space: 1.5 fractions for the big card, 1 fraction for the small ones */
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 24px;
+    min-width: 100%; /* Forces the group to take exactly 1 window width */
+    box-sizing: border-box;
+}
+
+/* 4. The Featured Card */
+.featured-card {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Stretches to fill its grid column perfectly */
+}
+
+/* 5. The Secondary Cards Stack */
+.secondary-cards {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Stacks the two small cards evenly */
+    gap: 24px;
+    height: 100%; /* Matches the height of the featured card next to it */
+}
+
+/* 6. The Small Cards */
+.small-card {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Ensure images fill out their containers gracefully */
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-img {
+    flex: 1; /* Makes the big image stretch properly */
+}
+
+/* Update the card-footer class */
+.card-footer {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 16px;
+    margin-top: 0; /* Removing the old flexbox fix */
+}
+
+.card-content {
+    position: relative; /* This is the anchor! */
+    padding: 24px;
+    padding-bottom: 84px; /* Creates permanent empty space for the footer to sit in */
+}
+
+.small-card .card-content {
+    padding: 16px 20px;
+    padding-bottom: 64px; /* Space for the smaller footer */
+}
+
+.small-card .card-footer {
+    bottom: 16px;
+    left: 20px;
+    right: 20px;
+    border-top: none; /* Keeps your clean look for small cards */
+    padding-top: 0;
+}
+
+/* --- Mobile Responsive Layout for Expeditions --- */
+@media (max-width: 768px) {
+    /* 1. Flatten the structure so all cards act as direct siblings */
+    .expedition-group, 
+    .secondary-cards {
+        display: contents; 
+    }
+
+    /* 2. Adjust track spacing and add inset padding */
+    .expeditions-track {
+        gap: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* 2b. Scroll container needs snap padding */
+    .expeditions-scroll-container {
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 20px;
+        padding-bottom: 12px;
+    }
+
+    /* 3. Uniform compact card sizing — calc ensures full card fits in viewport */
+   .featured-card, 
+    .small-card {
+        min-width: 85vw; /* Safer width, avoids right-edge bleeding */
+        max-width: 85vw;
+        width: 85vw;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        height: auto;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        background-color: #1c2021;
+        position: relative;
+    }
+
+    /* 4. Uniform image heights */
+    .featured-img,
+    .card-img-wrapper {
+        flex: none;
+        width: 100%;
+        height: 220px !important; /* Proper height for proportional scaling */
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .featured-img img,
+    .card-img-wrapper img,
+    .featured-card .card-img-wrapper img,
+    .small-card .card-img-wrapper img {
+        width: 100%;
+        height: 100% !important;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    /* 5. Uniform content area */
+    .featured-card .card-content,
+    .small-card .card-content {
+        padding: 20px;
+        padding-bottom: 76px; /* Space for the absolute footer */
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 6. Uniform typography */
+   .featured-card p,
+    .small-card p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        color: #cfc6ae;
+        /* Removed line-clamp, overflow, and webkit-box so text flows naturally */
+    }
+
+    .featured-card p,
+    .small-card p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        display: -webkit-box;
+        /* -webkit-line-clamp: 3; */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #cfc6ae;
+    }
+
+    /* 7. Uniform footer positioning */
+    .featured-card .card-footer,
+    .small-card .card-footer {
+        position: absolute;
+        bottom: 16px;
+        left: 20px;
+        right: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    /* 8. Uniform Date and Stats */
+    .featured-card .departure,
+    .small-card .stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .featured-card .departure .label {
+        font-size: 11px;
+        color: #98907a;
+    }
+
+    .featured-card .departure .date,
+    .small-card .stats {
+        font-size: 13px;
+        font-weight: 600;
+        color: #dfe3e4;
+    }
+
+    /* 9. Uniform Buttons */
+    .featured-card .btn-circle,
+    .small-card .btn-circle-small {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        background-color: transparent;
+        border: 1px solid #4c4634;
+        color: #ffeebb;
+        flex-shrink: 0;
+    }
+
+    /* 10. Uniform Tags */
+    .featured-card .tags,
+    .small-card .tags {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        display: flex;
+        gap: 8px;
+    }
+
+    .featured-card .tag,
+    .small-card .tag {
+        padding: 4px 10px;
+        font-size: 11px;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        color: #fff;
+    }
+
+    /* 11. Hide Navigation Arrows to Maximize Screen Real Estate */
+    .nav-arrow {
+        display: none !important;
+    }
+    
+    .carousel-wrapper {
+        gap: 0; /* Remove gap that was used for arrows */
+        margin-bottom: 8px; /* Space before the swipe hint */
+    }
+
+    /* 12. Mobile Swipe Discoverability Hint */
+    .swipe-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #98907a;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.8;
+        transition: opacity 0.5s ease-out;
+        margin-bottom: 16px;
+    }
+
+    .swipe-indicator.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .swipe-arrow {
+        display: inline-block;
+        animation: swipePulse 2s infinite ease-in-out;
+        font-size: 16px;
+    }
+
+    @keyframes swipePulse {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(6px); }
+    }
+}
+
+
+/* --- Extra compact for small phones (≤480px) --- */
+@media (max-width: 480px) {
+   .featured-card, 
+    .small-card {
+        min-width: 90vw; /* Snug fit for very small screens */
+        max-width: 90vw;
+        width: 90vw;
+    }
+
+    .expeditions-track {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .expeditions-scroll-container {
+        scroll-padding-left: 16px;
+    }
+
+    .featured-img,
+    .card-img-wrapper {
+        height: 180px !important;
+    }
+
+    .featured-card .card-content,
+    .small-card .card-content {
+        padding: 14px;
+        padding-bottom: 64px;
+    }
+
+    .featured-card h3,
+    .small-card h4 {
+        font-size: 16px;
+    }
+
+    .featured-card p,
+    .small-card p {
+        font-size: 13px;
+        /* Make sure -webkit-line-clamp is DELETED from here too! */
+    }
+    .featured-card .card-footer,
+    .small-card .card-footer {
+        bottom: 10px;
+        left: 14px;
+        right: 14px;
+        padding-top: 10px;
+    }
+}
+
+/* insta & wts */
+
+/* --- Instagram Aesthetics --- */
+.btn-insta svg {
+    stroke: #E1306C; /* Official Instagram Pink */
+    transition: stroke 0.3s ease-in-out;
+}
+
+.btn-insta:hover {
+    border-color: #E1306C;
+    background: rgba(225, 48, 108, 0.1); /* Very soft pink glow */
+    color: #E1306C; /* Changes the text color smoothly */
+}
+
+/* --- WhatsApp Aesthetics --- */
+.btn-whatsapp svg {
+    stroke: #25D366; /* Official WhatsApp Green */
+    transition: stroke 0.3s ease-in-out;
+}
+
+.btn-whatsapp:hover {
+    border-color: #25D366;
+    background: rgba(37, 211, 102, 0.1); /* Very soft green glow */
+    color: #25D366; /* Changes the text color smoothly */
+}
+
+/* Smooth transition for the SVG icons inside all minimal buttons */
+.btn-minimal svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Optional: Adds a tiny elegant bounce to the icon on hover */
+.btn-minimal:hover svg {
+    transform: scale(1.1);
+}
+
+.btn-minimal {
+    /* Flexbox magic for perfect alignment */
+    display: inline-flex;
+    align-items: center;      /* Vertically centers the icon and text */
+    justify-content: center;
+    gap: 10px;                /* Perfect spacing between logo and text */
+    
+    /* Creating the 'Round Box' aesthetic */
+    padding: 10px 24px;       /* Gives it that nice, breathable box shape */
+    border-radius: 50px;      /* The completely round pill-box look */
+    
+    /* Typography & Colors */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;           /* Fixes any weird vertical text shifting */
+    color: var(--on-surface, #ffffff);
+    
+    /* The visible box styling */
+    background-color: rgba(255, 255, 255, 0.05); /* Very subtle visible background */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Crisp, light border */
+    transition: all 0.3s ease-in-out;
+}
+
+/* This tiny detail stops the SVG icon from misaligning */
+.btn-minimal svg {
+    display: block; 
+    margin-top: -1px; /* Micro-adjustment for absolute optical centering */
+}
+
+/* Classy hover effect */
+.btn-minimal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds a premium floating shadow */
+}
+
+/* Bg stars/glitter  */
+
+/* The Glitter Canvas Element */
+.glitter-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2; /* Deep background, behind everything */
+    pointer-events: none; /* Users can't click on it */
+    opacity: 0.5; /* From your React code */
+    mix-blend-mode: lighten;
+}
+
+/* 
+   THE SECRET: Make target sections transparent so the glitter shows through! 
+   Make sure these IDs exactly match your HTML sections.
+*/
+#past-expeditions, 
+#about-us, 
+#review, 
+#meet-the-team {
+    background-color: transparent !important;
+    position: relative; /* Ensures text stays above */
+}
+
+/* 
+   CRITICAL: Any sections where you DO NOT want the glitter (like Hero, Footer, etc.) 
+   must have a solid background color so they cover the fixed canvas.
+*/
+.hero, 
+footer {
+    background-color: #1c2021; /* Replace with your site's actual dark background color */
+    position: relative;
+    z-index: 1; /* Keeps solid sections above the glitter */
+}
+
+/* Preloader */
+/* ---------------------------------------------------
+   MINIMALIST ELEVATION PRELOADER
+--------------------------------------------------- */
+
+.minimal-loader-wrapper {
+    position: fixed;
+    inset: 0;
+    background: #050505; /* Deep, seamless dark blend */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Buttery smooth fade out to reveal the site */
+    transition: opacity 1s cubic-bezier(0.65, 0, 0.35, 1), 
+                visibility 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.minimal-loader-wrapper.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* The abstract journey line */
+.elevation-line {
+    width: 140px;
+    height: 40px;
+    overflow: visible;
+}
+
+.elevation-line path {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.75); /* Subtle, elegant off-white */
+    stroke-width: 1.5; /* Ultra-thin & premium */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    
+    /* This setup makes the path hidden initially, then draws it */
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    animation: drawElevation 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.elevation-text {
+    font-size: 0.65rem;
+    letter-spacing: 8px;
+    color: #FFD700; /* Yahan apna exact yellow hex code daal dijiye */
+    text-transform: uppercase;
+    animation: pulseText 2.5s infinite alternate ease-in-out;
+}
+
+/* --- ANIMATIONS --- */
+
+@keyframes drawElevation {
+    0% { stroke-dashoffset: 250; }
+    100% { stroke-dashoffset: 0; } /* Line fully drawn (reached destination) */
+}
+
+@keyframes pulseText {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.7; }
+}
+
+/* Custom Cursor  */
+/* Hide the default system cursor */
+/* 1. Universal reset for touch devices - hide custom cursor completely */
+.cursor-dot, .cursor-outline {
+    display: none;
+}
+
+/* 2. Desktop/Mouse specific styles */
+@media (pointer: fine) {
+    /* Hide system cursor universally across everything */
+    * {
+        cursor: none !important;
+    }
+
+    .cursor-dot, .cursor-outline {
+        display: block; /* Unhide for desktop */
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        border-radius: 50%;
+        /* Use CSS variables injected by JS for GPU-accelerated positioning */
+        transform: translate(calc(var(--x) - 50%), calc(var(--y) - 50%));
+    }
+
+    /* The Tracker Dot */
+    .cursor-dot {
+        width: 6px;
+        height: 6px;
+        z-index: 9999;
+        background-color: #f5f6fa;
+        opacity: 1;
+        /* Do NOT transition 'transform'. Instead, transition width/height for the hover effect */
+        transition: background-color 0.2s ease, opacity 0.2s ease, width 0.2s ease, height 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    /* The Topographic Contour Ring */
+    .cursor-outline {
+        width: 35px;
+        height: 35px;
+        z-index: 9998;
+        border: 1px dashed rgba(245, 246, 250, 0.3);
+        opacity: 1;
+        transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, border-style 0.3s ease, opacity 0.2s ease;
+    }
+
+    /* --- Interactive Hover Effects --- */
+    
+    a:hover ~ .cursor-dot, 
+    button:hover ~ .cursor-dot,
+    input:hover ~ .cursor-dot,
+    select:hover ~ .cursor-dot {
+        /* Instead of scaling, change actual dimensions to avoid transform override bugs */
+        width: 15px; 
+        height: 15px;
+        background-color: #ffffff; 
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.4); 
+    }
+
+    a:hover ~ .cursor-outline, 
+    button:hover ~ .cursor-outline {
+        width: 50px;
+        height: 50px;
+        border-color: rgba(245, 246, 250, 0.8);
+        border-style: solid; 
+    }
+}
+
+/* pop-up */
+/* =============================================
+   UPCOMING TREK POP-UP (Native Design System)
+   ============================================= */
+
+.premium-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 15, 16, 0.85); /* Deep dark tint matching your var(--surface-container-lowest) */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 2000; /* Stays safely above the navbar which is at 1000 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    
+    /* Hidden State */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 0.5), visibility 0.5s;
+}
+
+.premium-popup-overlay.show-popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+.premium-popup-card {
+   /* Aapke Pine Surface (#1c2021) ka exact RGB '28, 32, 33' hai. Last value (0.85) opacity control karti hai. */
+    background-color: rgba(28, 32, 33, 0.5); 
+    
+    /* Waise, aesthetic frosted-glass vibe ke liye background blur add karna zaroori hai */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    
+    border-radius: var(--radius-md); 
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Glass effect par slightly brighter border aur classy lagti hai */
+    
+    /* Baaki aapka exact purana code */
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    overflow: hidden;
+    
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5), 0 16px 24px rgba(10, 15, 16, 0.3);
+    
+    transform: translateY(30px) scale(0.96);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+.premium-popup-overlay.show-popup .premium-popup-card {
+    transform: translateY(0) scale(1);
+}
+
+/* Classy Close Button */
+.popup-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(15, 20, 21, 0.6); /* Frosted glass effect */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--on-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.popup-close-btn:hover {
+    background: var(--primary-container);
+    color: #221b00;
+    transform: scale(1.1) rotate(90deg); /* Playful yet aesthetic hover */
+    box-shadow: 0 8px 16px rgba(244, 208, 63, 0.2);
+}
+
+/* Image & Layout */
+.popup-img-wrapper {
+    position: relative;
+    height: 220px;
+    width: 100%;
+}
+
+.popup-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: var(--primary-container);
+    color: #221b00;
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Content Rendering */
+.popup-content {
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.popup-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--on-surface);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.popup-subtitle {
+    font-size: 15px;
+    color: var(--on-surface-variant);
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* Buttons Alignment */
+.popup-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.w-full {
+    flex: 1;
+    width: 100%;
+}
+
+/* Responsive Scaling for Mobile Screens */
+@media (max-width: 480px) {
+    .premium-popup-card {
+        max-width: 90vw;
+    }
+    .popup-img-wrapper {
+        height: 180px;
+    }
+    .popup-title {
+        font-size: 22px;
+    }
+    .popup-actions {
+        flex-direction: column; /* Stack buttons vertically on small phones */
+        gap: 12px;
+    }
+}
+
+/* pop-up btn */
+/* =============================================
+   SMART POP-UP TRIGGERS (Desktop vs Mobile)
+   ============================================= */
+
+/* 1. Desktop Mode: Mobile icon ko hide karo (>1050px) */
+@media (min-width: 1051px) {
+    .mobile-trek-btn {
+        display: none !important;
+    }
+}
+
+/* 2. Mobile Mode: Desktop nav-link ko hamburger menu se hide karo (<=1050px) */
+@media (max-width: 1050px) {
+    .desktop-trek-link {
+        display: none !important;
+    }
+}
+
+/* --- Mountain Icon Hover Aesthetics --- */
+.btn-trek svg {
+    stroke: var(--primary-container); /* Safety Yellow */
+    transition: stroke 0.3s ease-in-out;
+}
+
+.btn-trek:hover {
+    border-color: var(--primary-container);
+    background: rgba(244, 208, 63, 0.1); /* Subtle yellow glow */
+    color: var(--primary-container);
+}

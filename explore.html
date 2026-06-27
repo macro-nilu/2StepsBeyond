@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2StepsBeyond</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="optimized.css">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVJD3Z7YGB"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-CVJD3Z7YGB');
+</script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xd10g4waqe");
+</script>
+
+</head>
+
+<div id="minimal-loader" class="minimal-loader-wrapper">
+    <div class="loader-center">
+        <svg class="elevation-line" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 10 40 L 70 40 L 100 10 L 130 40 L 190 40" />
+        </svg>
+        <div class="elevation-text">2StepsBeyond</div>
+    </div>
+</div>
+
+<body>
+
+     <div class="cursor-dot" data-cursor-dot></div>
+<div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+             <a href="#"><img src="images/2StepsBeyond.JPG.webp" alt="2StepsBeyond Logo" class="logo-img"></a>
+            <a href="#"><span>2StepsBeyond</span></a>
+            </div>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#explore" class="active">Explore Trails</a>
+                <a href="#about-us">About Us</a>
+                <a href="#review">Community</a>
+                <a href="#meet-the-team">Meet the Team</a>
+                <a href="#" class="trek-popup-trigger desktop-trek-link">Next Trek</a>
+            </nav>
+            <div class="nav-actions">
+
+                <a href="#" class="btn-minimal btn-trek trek-popup-trigger mobile-trek-btn" aria-label="Upcoming Trek" onclick="trackEvent('upcoming_trek_click_navbar');">
+                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                     <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+                     </svg>
+                     <span>Next Trek</span> 
+               </a>
+
+                <!-- Instagram Button -->
+                <a href="https://www.instagram.com/2stepsbeyond_/" class="btn-minimal btn-insta" target="_blank" rel="noopener noreferrer" onclick="trackEvent('instagram_click_navbar');">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span>Instagram</span>
+                </a>
+
+                <!-- WhatsApp Community Button -->
+                <a href="https://chat.whatsapp.com/CG7fjlOawMf3h0rNKeoILi" class="btn-minimal btn-whatsapp" target="_blank" rel="noopener noreferrer" onclick="trackEvent('whatsapp_click_navbar');">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                    <span>Join Community</span>
+                </a>
+            </div>
+            
+        </div>
+    </header>
+
+    <section class="hero" id="explore">
+    <div class="hero-bg">
+        <video class="bg-video" autoplay loop muted playsinline preload="none" poster="thumbnails/Stars.webp">
+            <source src="stargazing/star3.mp4" type="video/mp4">
+            <img src="thumbnails/Stars.webp" alt="Mountain peak at sunrise">
+        </video>
+        <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-content container">
+        <h1>Discover Your Next Horizon.</h1>
+        <p class="hero-subtitle">Join a community where every trail sparks growth, meaningful connections, responsible exploration, and unforgettable adventures beyond your comfort zone.</p>
+        <div class="hero-buttons">
+            <a href="https://wa.me/919561636900?text=Hi%202StepsBeyond!%20I%20would%20like%20to%20book%20a%20trail.%20Please%20share%20the%20details%20of%20upcoming%20expeditions."
+               target="_blank"
+               rel="noopener noreferrer">
+                <button class="btn btn-primary" onclick="trackEvent('book_trail')">
+                    Book Your Trail <span class="arrow">→</span>
+                </button>
+            </a>
+            <a href="#footer"><button class="btn btn-outline" onclick="trackEvent('learn_more')">Learn More</button></a>
+        </div>
+    </div>
+</section>
+
+    <!-- upcoming or past -->
+
+   <section class="expeditions container section-padding">
+    <div class="section-header flex-between">
+        <div>
+            <h2>Past Expeditions</h2>
+            <p class="subtitle">Curated technical routes for the seasoned explorer.</p><br>
+        </div>
+    </div>
+
+    <div class="carousel-wrapper">
+        
+        <button class="nav-arrow" onclick="scrollExpeditions(-1)">&#10094;</button>
+
+        <div class="expeditions-scroll-container" id="expeditionContainer">
+            <div class="expeditions-track">
+                
+                <div class="expedition-group">
+                    <article class="card featured-card">
+                        <div class="card-img-wrapper featured-img">
+                            <img src="images/ABC(1).webp" alt="Annapurna Circuit" class="card-img" loading="lazy" decoding="async">
+                            <div class="tags">
+                                <span class="tag tag-red">Expert</span>
+                                <span class="tag tag-dark">5 Days</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Annapurana</h3>
+                            <p>A breathtaking multi-day journey through the Annapurna region, winding past terraced villages, rhododendron forests, and towering Himalayan peaks. Expect challenging ascents, high-altitude trails, and unforgettable mountain vistas at every turn.
+</p>
+                            <div class="card-footer">
+                                <div class="departure">
+                                    <span class="label">Date</span>
+                                    <span class="date">JUN 1 - 6, 2026</span>
+                                </div>
+                                <button class="btn-circle" aria-label="View Details" onclick="openWhatsApp('Annapurna trek')" onclick="trackEvent('view_details_from_past')">↗</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="secondary-cards">
+                        <article class="card small-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/kalsubai-1.JPG.webp" alt="Kalsubai " class="card-img" loading="lazy" decoding="async">
+                                <div class="tags"><span class="tag tag-light">Advanced</span></div>
+                            </div>
+                            <div class="card-content">
+                                <h4>Kalsubai Sunrise Trek</h4>
+                                <p>Experience the magic of Kalsubai, Maharashtra's highest peak, as the first rays of sunrise illuminate the surrounding Sahyadri ranges. Trek through dense forests and scenic trails, embrace the challenge of the climb, and be rewarded with breathtaking panoramic views from the summit. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
+</p>
+                                <div class="card-footer small-footer">
+                                    <span class="stats">FEB 27 - 28, 2026</span>
+                                    <button class="btn-circle-small" aria-label="View Details" onclick="openWhatsApp('Kalsubai Sunrise trek')" onclick="trackEvent('view_details_from_past')">↗</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card small-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/Sandhan_valley-2.JPG.webp" alt="Sandhan Valley" class="card-img" loading="lazy" decoding="async">
+                                <div class="tags"><span class="tag tag-light">Intermediate</span></div>
+                            </div>
+                            <div class="card-content">
+                                <h4>Sandhan Valley</h4>
+                                <p>Immerse yourself in the rugged beauty of Sandhan Valley, a breathtaking canyon hidden within the Sahyadri ranges. Journey through towering rock formations and untouched landscapes, conquer exciting rappelling sections, and enjoy a memorable camping experience beneath a star-filled sky surrounded by nature's tranquility.
+</p>
+                                <div class="card-footer small-footer">
+                                    <span class="stats">MAY 23 - 24, 2026</span>
+                                    <button class="btn-circle-small" aria-label="View Details" onclick="openWhatsApp('Sandhan Valley trek')" onclick="trackEvent('view_details_from_past')">↗</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="expedition-group">
+                    <article class="card featured-card">
+                        <div class="card-img-wrapper featured-img">
+                            <img src="images/Chandrashila.webp" alt="Chandrashila" class="card-img" loading="lazy" decoding="async">
+                            <div class="tags">
+                                <span class="tag tag-light">Advanced</span>
+                                <span class="tag tag-dark">1 Day</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Chopta - Chandrashila Trek</h3>
+                            <p>Experience the breathtaking beauty of the Himalayas on this thrilling one-day trek from Chopta to Chandrashila. Traverse scenic forest trails, witness panoramic views of snow-capped peaks, and soak in the serenity of the mountains. A perfect adventure for nature lovers, photographers, and trekking enthusiasts alike. 🌄🥾</p>
+                            <div class="card-footer">
+                                <div class="departure">
+                                    <span class="label">Date</span>
+                                    <span class="date">DEC 20, 2025</span>
+                                </div>
+                                <button class="btn-circle" aria-label="View Details" onclick="openWhatsApp('Chopta - Chandrashila Trek')" onclick="trackEvent('view_details_from_past')">↗</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="secondary-cards">
+                        <article class="card small-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/MMC.JPG.webp" alt="MMC" class="card-img" loading="lazy" decoding="async">
+                                <div class="tags"><span class="tag tag-light">Beginner</span></div>
+                            </div>
+                            <div class="card-content">
+                                <h4>Mumbai Midnight Cycling</h4>
+                                 <p>Experience Mumbai like never before on this exciting midnight cycling adventure through the city’s iconic streets and waterfronts. Ride beneath the city lights, witness famous landmarks in a quieter setting, and enjoy the refreshing night breeze. A perfect experience for fitness enthusiasts, explorers, and anyone seeking a unique urban adventure. 🚴🌃
+</p>
+                                <div class="card-footer small-footer">
+                                    <span class="stats">JAN 8, 2026</span>
+                                    <button class="btn-circle-small" aria-label="View Details" onclick="openWhatsApp('Mumbai Midnight Cycling trek')" onclick="trackEvent('view_details_from_past')">↗</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card small-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/Nakhind_Ridge.JPG.webp" alt="Nakhind Ridge" class="card-img" loading="lazy" decoding="async">
+                                <div class="tags"><span class="tag tag-light">Intermediate</span></div>
+                            </div>
+                            <div class="card-content">
+                                <h4>Nakhind Ridge Trek</h4>
+                                <p>Discover the hidden charm of Nakhind Ridge on this exhilarating one-day trek through the heart of the Sahyadris. Follow winding forest paths, cross rocky ridgelines, and enjoy sweeping views of surrounding peaks and valleys. An ideal adventure for nature lovers, photographers, and trekking enthusiasts seeking a refreshing escape. 🌿⛰️
+</p>
+                                <div class="card-footer small-footer">
+                                    <span class="stats">JAN 11, 2026</span>
+                                    <button class="btn-circle-small" aria-label="View Details" onclick="openWhatsApp('Nakhind Ridge trek')" onclick="trackEvent('view_details_from_past')">↗</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="expedition-group">
+                    <article class="card featured-card">
+                        <div class="card-img-wrapper featured-img">
+                            <img src="images/MMC-1.JPG (2).webp" alt="Chandrashila" class="card-img" loading="lazy" decoding="async">
+                            <div class="tags">
+                                <span class="tag tag-light">Beginner</span>
+                                <span class="tag tag-dark">1 Day</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Mumbai Midnight Cycling</h3>
+                            <p>Experience Mumbai like never before on this exciting midnight cycling adventure through the city’s iconic streets and waterfronts. Ride beneath the city lights, witness famous landmarks in a quieter setting, and enjoy the refreshing night breeze. A perfect experience for fitness enthusiasts, explorers, and anyone seeking a unique urban adventure. 🚴🌃
+</p>
+                            <div class="card-footer">
+                                <div class="departure">
+                                    <span class="label">Date</span>
+                                    <span class="date">DEC 20, 2025</span>
+                                </div>
+                                <button class="btn-circle" aria-label="View Details" onclick="openWhatsApp('Mumbai Midnight Cycling')" onclick="trackEvent('view_details_from_past')">↗</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="secondary-cards">
+                        <article class="card small-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/Domzira.webp" alt="MMC" class="card-img" loading="lazy" decoding="async">
+                                <div class="tags"><span class="tag tag-light">Beginner</span></div>
+                            </div>
+                            <div class="card-content">
+                                <h4>Domzira Waterfall</h4>
+                                <p>Discover the enchanting beauty of Domzira Waterfall on this refreshing monsoon adventure through lush forests and scenic countryside. Follow nature-filled trails, witness cascading waters in their full glory, and immerse yourself in the serenity of the outdoors. A perfect getaway for nature lovers, photographers, and adventure seekers alike. 💧🌿</p>
+                                <div class="card-footer small-footer">
+                                    <span class="stats">9 - 10 MAY, 2026</span>
+                                    <button class="btn-circle-small" aria-label="View Details" onclick="openWhatsApp('Domzira Waterfall')" onclick="trackEvent('view_details_from_past')">↗</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card small-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/Sondai_2.JPG.webp" alt="Stay Tuned For More" class="card-img" loading="lazy" decoding="async">
+                                <div class="tags"><span class="tag tag-light">Beginner</span></div>
+                            </div>
+                            <div class="card-content">
+                                <h4>Sondai Fort</h4>
+                                <p>Explore the scenic beauty of Sondai Fort on this exciting trek through lush forest trails and rolling hills of the Sahyadris. Climb to the summit, admire breathtaking views of Morbe Dam and surrounding valleys, and experience the charm of a lesser-known mountain escape. A perfect adventure for nature lovers, photographers, and trekking enthusiasts. ⛰️🌿</p>
+                                <div class="card-footer small-footer">
+                                    <span class="stats">13 DEC, 2025</span>
+                                    <button class="btn-circle-small" aria-label="View Details" onclick="openWhatsApp('Sondai Fort')" onclick="trackEvent('view_details_from_past')">↗</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="expedition-group">
+                    <article class="card featured-card">
+                        <div class="card-img-wrapper featured-img">
+                            <img src="images/Manali (1).webp" alt="Chandrashila" class="card-img" loading="lazy" decoding="async">
+                            <div class="tags">
+                                <span class="tag tag-light">Beginner</span>
+                                <span class="tag tag-dark">7 Day</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Manali</h3>
+                            <p>Experience the majestic beauty of Manali on this unforgettable mountain getaway amidst the heart of the Himalayas. Explore charming valleys, pine-covered landscapes, and breathtaking viewpoints while embracing the region's vibrant culture and natural wonders. A perfect escape for nature lovers, adventure seekers, photographers, and travelers looking for a refreshing retreat. 🏔️❄️</p>
+                            <div class="card-footer">
+                                <div class="departure">
+                                    <span class="label">Date</span>
+                                    <span class="date">6 - 12 FEB, 2026</span>
+                                </div>
+                                <button class="btn-circle" aria-label="View Details" onclick="openWhatsApp('Manali')" onclick="trackEvent('view_details_from_past')">↗</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="secondary-cards">
+                        <article class="card small-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/Raigad.webp" alt="MMC" class="card-img" loading="lazy" decoding="async">
+                                <div class="tags"><span class="tag tag-light">Beginner</span></div>
+                            </div>
+                            <div class="card-content">
+                                <h4>Raigad Fort Trek</h4>
+                                 <p>Step into the legacy of the Marathas with an inspiring trek to Raigad Fort, the historic capital of Chhatrapati Shivaji Maharaj's empire. Ascend ancient pathways, explore majestic ruins steeped in history, and witness sweeping views of the Sahyadri ranges. A remarkable blend of heritage, adventure, and natural beauty awaits every explorer. 🏰⛰️</p>
+                                <div class="card-footer small-footer">
+                                    <span class="stats">JAN 8, 2026</span>
+                                    <button class="btn-circle-small" aria-label="View Details" onclick="openWhatsApp('Raigad Fort Trek')" onclick="trackEvent('view_details_from_past')">↗</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card small-card">
+                            <div class="card-img-wrapper">
+                                <img src="images/revealing_soon.webp" alt="Revealing Soon" class="card-img" loading="lazy" decoding="async">
+                                <div class="tags"><span class="tag tag-light">Stay Tuned</span></div>
+                            </div>
+                            <div class="card-content">
+                                <h4>Revealing Soon...</h4>
+                                <p>🏔️ Secret Expedition
+
+Some trails are worth waiting for.
+
+A hidden adventure is taking shape beyond the horizon. New routes, fresh experiences, and unforgettable moments are on their way.
+
+Be among the first explorers to uncover what's next.
+
+Revealing Soon... ✨</p>
+                                <div class="card-footer small-footer">
+                                    <span class="stats">Very Soon</span>
+                                    <button class="btn-circle-small" aria-label="View Details" onclick="openWhatsApp1('Very Soon')" onclick="trackEvent('view_details_from_past')">↗</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- paste here -->
+
+            </div>
+        </div>
+
+        <button class="nav-arrow" onclick="scrollExpeditions(1)">&#10095;</button>
+
+    </div>
+    <div class="swipe-indicator" id="expeditionsSwipeHint">
+        <span>Swipe to explore</span>
+        <span class="swipe-arrow">→</span>
+    </div>
+</section>
+
+
+<div class="section-spacer"></div>
+
+
+
+    <!-- About Us Section -->
+    <section id="about-us" class="mission container section-padding">
+        <div class="mission-grid">
+            <div class="mission-text">
+                <span class="kicker">About Us</span>
+
+<h2>Some of the Best Experiences Begin 2 Steps Beyond Your Comfort Zone.</h2>
+
+<p>2StepsBeyond was built from a simple belief that some of the best experiences in life begin when you take two steps beyond your comfort zone. We are a community of passionate trekkers and outdoor enthusiasts brought together by one shared purpose: to create meaningful experiences that inspire people to explore, connect, and grow through adventure.</p>
+
+<p>What started as a small group exploring the Sahyadris has grown into a team dedicated to designing safe, well-planned, and unforgettable outdoor journeys. From treks, camping, and backpacking adventures to experiences that challenge limits and create lifelong memories, every journey we host is built with intention, preparation, and purpose.</p>
+               
+                <div class="mission-features">
+                    <div class="feature">
+                        <div class="icon-box">△</div>
+                        <div class="feature-text">
+                            <h4>Growth Through Adventure</h4>
+<p>We believe adventure is about more than reaching a summit. It is about building confidence, embracing challenges, and discovering what lies beyond your limits.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="icon-box">🛡</div>
+                        <div class="feature-text">
+                            <h4>Responsible Exploration</h4>
+<p>We promote sustainable travel, eco-friendly practices, and encourage every explorer to respect, protect, and learn from nature.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mission-image-wrapper">
+                <img src="images/core2.webp" alt="Two trekkers walking through a dense forest" class="mission-img">
+                <div class="floating-stats-card">
+                    <h3>5+</h3>
+                    <p>YEARS OF SAFE,<br>SUSTAINABLE EXPEDITIONS<br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- reviews -->
+<section class="reviews container section-padding" id="review">
+    <div class="text-center">
+        <h2>Community Reviews</h2>
+        <p class="subtitle">Hear from fellow explorers who have journeyed beyond with us.</p>
+    </div>
+
+    <div class="carousel-wrapper">
+        
+        <button class="nav-arrow" onclick="scrollReviews(-1)">&#10094;</button>
+
+        <div class="reviews-scroll-container" id="reviewContainer">
+            <div class="reviews-track">
+                
+                <article class="review-card card">
+                    <div class="review-text-wrap">
+                        <p class="review-text">"On a serious note the whole trek was amazing I enjoyed a lot with all of you guys from the start to the end ❤️ the core team also handle the situation very fine way no disturbance nothing to worry about anything on thr trek 
+
+Respect to your core team 
+2STEPBEYOND you are amazing guys Thank you everyone 💫💟"</p>
+                    </div>
+                    <button class="btn-expand" onclick="toggleReview(this)">Read More</button>
+                    <div class="reviewer">
+                        <div class="reviewer-info">
+                            <h5>Pranav Mahadik</h5>
+                            <span>Trekking Enthusiast</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card card">
+                    <div class="review-text-wrap">
+                        <p class="review-text">" Superb experience, I loved the view as well as the support and motivation of the treker. I'll make sure to be in the next trek for fun and enjoyment. Thank you to all the people who were making the environment light and funny. 🫂❤️✨"</p>
+                    </div>
+                    <button class="btn-expand" onclick="toggleReview(this)">Read More</button>
+                    <div class="reviewer">
+                        <div class="reviewer-info">
+                            <h5>Bhumika</h5>
+                            <span>Student</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card card">
+                    <div class="review-text-wrap">
+                        <p class="review-text">"My first ever midnight cycling experience was with you guys, and it was honestly unforgettable! Although the after-effects were unbearable (my body definitely felt those 7+ hours 😅), I enjoyed every single minute of it.
+
+A special shoutout to Lakshya and Shubham you both were absolutely amazing throughout the ride. Thank you for keeping us entertained, making us laugh all along, and creating such a fun and comfortable atmosphere. Also, thank you for dancing in our reel and helping us shoot it as well!
+
+The entire experience was well organized, energetic, and full of great memories. I’m really happy to see how you’re growing this community through your own efforts. Keep enhancing it and making it even bigger because you’re doing a fantastic job.
+
+Looking forward to joining many more activities with you guys in the future. Thank you for such a memorable night! ❤️🌷"</p>
+                    </div>
+                    <button class="btn-expand" onclick="toggleReview(this)">Read More</button>
+                    <div class="reviewer">
+                        <div class="reviewer-info">
+                            <h5>Kashish Sinha</h5>
+                            <span>Content Creator</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card card">
+                    <div class="review-text-wrap">
+                        <p class="review-text">"Just wanted to say that we had a fantastic time on the trek! The whole experience was amazing, and it was great hanging out with everyone. The trek leaders were super friendly and made the journey a lot of fun.
+
+We really enjoyed the food as well, and everything was managed very smoothly. Thanks to you and the team for creating such a memorable experience.
+
+Looking forward to joining many more treks with you guys in the future!"</p>
+                    </div>
+                    <button class="btn-expand" onclick="toggleReview(this)">Read More</button>
+                    <div class="reviewer">
+                        <div class="reviewer-info">
+                            <h5>Samruddhi Daware</h5>
+                            <span>Chartered Accountant</span>
+                        </div>
+                    </div>
+                </article>
+
+                 <article class="review-card card">
+                    <div class="review-text-wrap">
+                        <p class="review-text">" Huge thanks to 2Steps Beyond for an unforgettable Sandhan Valley trip!
+Amazing planning, smooth coordination, great vibes, and memories that’ll stay forever. The trek, the adventure, and the whole experience were absolutely worth it. Looking forward to many more trips with you guys! ❤️🏔️"</p>
+                    </div>
+                    <button class="btn-expand" onclick="toggleReview(this)">Read More</button>
+                    <div class="reviewer">
+                        <div class="reviewer-info">
+                            <h5>Priyanshu Chamoli</h5>
+                            <span>Trekking Enthusiast</span>
+                        </div>
+                    </div>
+                </article>
+
+                 <article class="review-card card">
+                    <div class="review-text-wrap">
+                        <p class="review-text">"We had an absolutely wonderful trip and couldn’t be happier with the overall experience. Everything was very well organized, from the travel arrangements to the accommodations and activities. The entire journey was smooth, hassle free, and enjoyable. The team was extremely supportive, professional, and always available to assist whenever needed.
+
+What made the trip truly special was the attention to detail and the effort put into ensuring everyone had a great time. We were able to relax, explore new places, and create beautiful memories without having to worry about any logistics. Every aspect of the trip exceeded our expectations.
+
+Thank you for making this experience so memorable. We genuinely appreciate the hard work and dedication of everyone involved. We would gladly recommend your services to others and look forward to traveling with you again in the future!
+Thanks."</p>
+                    </div>
+                    <button class="btn-expand" onclick="toggleReview(this)">Read More</button>
+                    <div class="reviewer">
+                        <div class="reviewer-info">
+                            <h5>Omkar Satarshetty</h5>
+                            <span>Consultant</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <button class="nav-arrow" onclick="scrollReviews(1)">&#10095;</button>
+
+    </div>
+    
+    <div class="swipe-indicator" id="reviewsSwipeHint">
+        <span>Swipe to explore</span>
+        <span class="swipe-arrow">→</span>
+    </div>
+
+</section>
+    
+<!-- leaders  -->
+<section class="leaders container section-padding" id="meet-the-team">
+    <div class="text-center">
+        <h2>Leaders of the Community</h2>
+        <p class="subtitle">Meet the guides and local experts who will lead your next ascent.</p>
+    </div>
+
+    <div class="leaders-list">
+        
+        <div class="leader-row">
+            <div class="leader-image">
+                <img src="images/bbg.JPG (1).webp" alt="Rushikesh Surse" class="leader-avatar" loading="lazy" decoding="async">
+            </div>
+            <div class="leader-info">
+                    <h4>Rushikesh Surse</h4><span class="leader-role">Co-Founder & Trek Leader</span>
+                
+                <p class="leader-desc">For Rushikesh, trekking is about much more than reaching a summit. It’s about embracing challenges, discovering new perspectives, and building meaningful connections with both nature and people.
+
+With over five years of trekking experience in the Sahyadri ranges and more than 20 treks led, he brings a blend of experience, preparation, and passion to every journey. His deep understanding of routes, terrain, and trek planning plays a vital role in shaping the experiences offered by 2stepsbeyond.
+
+From selecting destinations to designing routes that strike the right balance between adventure and safety, Rushikesh is involved in every stage of the journey. His attention to detail and commitment to creating memorable experiences ensure that every trek is thoughtfully planned and rewarding for participants.
+
+Beyond his role as a leader, he is someone who finds peace in the outdoors and believes that every trail has a story waiting to be discovered. Whether it's a challenging climb, a quiet forest path, or a sunrise from a mountain peak, he encourages people to slow down, explore, and appreciate the experience along the way.
+
+As the Co-Founder of 2stepsbeyond, Rushikesh is not just leading treks. He is helping create journeys that inspire adventure, foster connection, and go beyond the ordinary.
+</p>
+            </div>
+            <a href="https://www.instagram.com/_whynot_rusicase_/" target="_blank" class="insta-btn" aria-label="Instagram" onclick="trackEvent('instagram_click_leader')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+    </a>
+        </div>
+
+        <div class="leader-row">
+            <div class="leader-image">
+                <img src="images/lakshya.JPG.webp" alt="Lakshya Maurya" class="leader-avatar" loading="lazy" decoding="async">
+            </div>
+            <div class="leader-info">
+                    <h4>Lakshya Maurya</h4>
+                <span class="leader-role">Co-Founder & Trek Leader</span>
+                <p class="leader-desc">For Lakshya, trekking is much more than reaching a summit. It is about stepping out of your comfort zone, embracing challenges, and creating experiences that stay with you long after the journey ends.
+
+Having spent years exploring the Sahyadri ranges, Lakshya has developed a deep connection with the mountains and the wilderness they hold. His knowledge goes beyond trails and routes. From understanding the region's landscape and biodiversity to appreciating its history and culture, he believes every trek has something valuable to teach, whether it's resilience, teamwork, patience, or simply a greater appreciation for nature.
+
+As the Co-Founder of 2StepsBeyond, Lakshya plays a key role in designing and leading expeditions. From choosing destinations to planning experiences that balance adventure, learning, and fun, he ensures that every trek offers something meaningful for participants.
+
+What sets him apart is not just his familiarity with the mountains, but the stories, insights, and perspective he brings to every journey. He encourages people to connect with nature, challenge themselves, and discover strengths they didn't know they had.
+
+For Lakshya, every trek is an opportunity for growth, exploration, and creating unforgettable memories. More than a trek leader, he is someone who inspires others to see the mountains not just as destinations, but as places that can change the way we look at ourselves and the world around us.
+</p>
+            </div>
+            <a href="https://www.instagram.com/rinnesharingan_0/" target="_blank" class="insta-btn" aria-label="Instagram" onclick="trackEvent('instagram_click_leader')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+    </a>
+        </div>
+
+        <div class="leader-row">
+            <div class="leader-image">
+                <img src="images/shubham.JPG.webp" alt="Shubham Zarkar" class="leader-avatar" loading="lazy" decoding="async">
+            </div>
+            <div class="leader-info">
+                    <h4>Shubham Zarkar</h4>
+                <span class="leader-role">Founding Member & Trek Leader</span>
+                <p class="leader-desc">For Shubham, trekking is about much more than reaching a destination. As a Trek Leader at 2StepsBeyond, he believes the true essence of every journey lies in the experiences along the way, exploring nature, embracing adventure, and creating unforgettable memories. Passionate about travel and the outdoors, Shubham enjoys guiding people through new experiences while fostering a sense of camaraderie within the group. His enthusiasm for the mountains, combined with his ability to bring people together, helps make every trek engaging, enjoyable, and memorable. Through every journey, he strives to create meaningful experiences that leave participants with stories, friendships, and memories to cherish long after the trek ends.
+</p>
+            </div>
+            <a href="https://www.instagram.com/shubham_zarkar_9/" target="_blank" class="insta-btn" aria-label="Instagram" onclick="trackEvent('instagram_click_leader')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+    </a>
+        </div>
+
+        <div class="leader-row">
+            <div class="leader-image">
+                <img src="images/suhani.JPG.webp" alt="Suhani Kalbhor" class="leader-avatar" loading="lazy" decoding="async">
+            </div>
+            <div class="leader-info">
+                    <h4>Suhani Kalbhor</h4>
+                <span class="leader-role">Founding Member & Trek Leader</span>
+                <p class="leader-desc">For Suhani, trekking is more than just an adventure. It’s where she finds peace, purpose, and a deeper connection with nature.
+
+A passionate trekker and confident trek leader, she brings enthusiasm, creativity, and positivity to every journey. Known for her calm yet fearless presence on the trails, she has a way of making every trek feel welcoming, engaging, and memorable for everyone around her.
+
+As one of the creative minds behind 2stepsbeyond, Suhani contributes fresh ideas and thoughtful experiences that add a unique touch to every expedition. Her energy and perspective help shape journeys that are not only adventurous but also meaningful.
+
+What truly sets her apart is her commitment to encouraging more women to step outdoors, travel confidently, and embrace adventure without hesitation. She believes that every girl deserves the opportunity to explore nature in a safe and supportive environment.
+
+Through her guidance, encouragement, and positive spirit, she helps create that space for others. Whether it's a first trek or a challenging summit, she inspires people to believe in themselves and enjoy the journey.
+
+At 2stepsbeyond, Suhani isn’t just leading treks. She’s helping build a community where adventure, confidence, and connection go hand in hand.
+.</p>
+            </div>
+            <a href="https://www.instagram.com/suhaniiiii_28/" target="_blank" class="insta-btn" aria-label="Instagram" onclick="trackEvent('instagram_click_leader')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+    </a>
+        </div>
+
+        <div class="leader-row">
+            <div class="leader-image">
+                <img src="images/groax.JPG.webp" alt="Gaurav Borse" class="leader-avatar" loading="lazy" decoding="async">
+            </div>
+            <div class="leader-info">
+                    <h4>Gaurav Borse</h4>
+                <span class="leader-role">Founding Member & Trek Leader</span>
+                <p class="leader-desc"> For Gaurav, the mountains are far more than just destinations, they are places of discovery, growth, and adventure. A travel enthusiast and dedicated Trek Leader at 2StepsBeyond, he is passionate about exploring new trails and inspiring others to step beyond their comfort zones. Through his leadership and love for the outdoors, Gaurav helps create experiences that are both exciting and meaningful. Whether he is guiding treks, fostering connections within the community, or creating engaging content for 2StepsBeyond, he brings enthusiasm, reliability, and a spirit of adventure to every journey. His goal is to ensure that every trek becomes an unforgettable experience filled with learning, camaraderie, and lasting memories.
+</p>
+            </div>
+            <a href="https://www.instagram.com/ft.groaxzz_/" target="_blank" class="insta-btn" aria-label="Instagram" onclick="trackEvent('instagram_click_leader')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+    </a>
+        </div>
+        
+
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="container footer-content flex-between">
+            <div class="footer-brand">
+                <a href="#">
+                    <div class="logo">
+                        <img src="images/2StepsBeyond.JPG.webp" alt="2StepsBeyond Logo" class="logo-img">
+                        <span>2StepsBeyond</span>
+                    </div>
+                </a>
+                <p class="copyright">© 2024 2StepsBeyond. Built for the wild.</p>
+
+                <div class="footer-signature">
+  <span>Deployed above the clouds by Nilesh Sharma</span>
+  <a href="https://instagram.com/nilu.peelu" target="_blank" rel="noopener noreferrer" class="ig-link" aria-label="Instagram" onclick="trackEvent('instagram_click_footer')">
+    <!-- Minimalist Outline Instagram Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+    </svg>
+  </a>
+</div>
+            </div>
+
+            
+            <div class="footer-links">
+                 <a href="Docs/watermarked_Privacy_Policy_2SB.pdf" download="2StepsBeyond_Privacy_Policy">Privacy </a>
+                 <a href="Docs/watermarked_Terms_and_Conditions_2SB.pdf" download="2StepsBeyond_Terms">Terms </a>
+                 <a href="Docs/watermarked_Participant_Guidelines_2SB.pdf" download="2StepsBeyond_Trail_Ethics">Trail Ethics </a>
+                 <a href="Docs/watermarked_Refund_Policy_2SB.pdf" download="2StepsBeyond_Refund_Policy">Refund Policy </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="trekPopupOverlay" class="premium-popup-overlay">
+    <div class="premium-popup-card">
+        <button id="closePopup" class="popup-close-btn" aria-label="Close">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        
+        <div class="popup-img-wrapper">
+            <img src="next/ratangad.webp" alt="Upcoming Trek" loading="lazy" decoding="async" />
+            <div class="popup-tag">Upcoming Next</div>
+        </div>
+        
+        <div class="popup-content">
+            <h3 class="popup-title">Ratangad Fort</h3>
+            <p class="popup-subtitle">Disconnect to reconnect. Only limited seats available for our next Ratangad Fort expedition.<br><b>Group Discount Available.</b></p>
+            
+            <div class="popup-actions">
+                <button class="btn btn-primary w-full" onclick="openWhatsAppBook('Ratangad Fort trek')" onclick="trackEvent('book_from_pop-up')">Book Your seat</button>
+                <button class="btn btn-outline w-full" onclick="openWhatsAppDetails('Ratangad Fort trek')" onclick="trackEvent('get_details_from_pop-up')">Get Details</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- The Fixed Background Canvas -->
+<canvas id="glitter-canvas" class="glitter-bg"></canvas>
+
+<!-- Load Three.js from CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+
+
+<!-- Your existing custom JS file should come AFTER this -->
+<script src="script.js"></script>
+</body>
+</html>
+
