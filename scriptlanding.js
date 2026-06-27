@@ -4,29 +4,29 @@
 // 1. Define your complete pool of videos. 
 // Just list all the video filenames you have inside the 'stock_videos' folder.
 const availableVideos = [
-    "video1.mp4",
-    "video2.mp4",
-    "video3.mp4",
-    "video4.mp4",
-    "video5.mp4",
-    "video6.mp4",
-    "video7.mp4",
-    "video8.mp4",
-    "video9.mp4",
-    "video10.mp4",
-    "video11.mp4",
-    "video12.mp4",
-    "video13.mp4",
-    "video14.mp4",
-    "video15.mp4"
+    "Video1.mp4",
+    "Video2.mp4",
+    "Video3.mp4",
+    "Video4.mp4",
+    "Video5.mp4",
+    "Video6.mp4",
+    "Video7.mp4",
+    "Video8.mp4",
+    "Video9.mp4",
+    "Video10.mp4",
+    "Video11.mp4",
+    "Video12.mp4",
+    "Video13.mp4",
+    "Video14.mp4",
+    "Video15.mp4"
 ];
 
 // 2. Define the videos that have baked-in black bars (Portrait videos)
 // Update these filenames based on your actual stock footage!
 const videosWithBlackBars = [
-    "video3.mp4", 
-    "video9.mp4",
-    "video10.mp4"
+    "Video3.mp4", 
+    "Video9.mp4",
+    "Video10.mp4"
 ];
 
 function shuffleArray(array) {
