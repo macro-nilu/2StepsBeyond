@@ -2748,3 +2748,83 @@ footer {
     background: rgba(244, 208, 63, 0.1); /* Subtle yellow glow */
     color: var(--primary-container);
 }
+
+/* pop up slider  */
+/* Slider Base Styles */
+.trek-slider-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.trek-slide {
+    display: none; /* Hide all by default */
+    animation: fadeEffect 0.5s ease-in-out;
+}
+
+.trek-slide.active {
+    display: block; /* Show only the active one */
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeEffect {
+    from { opacity: 0.4; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Minimalist Dots Navigation */
+.slider-dots-container {
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.slider-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #d1d5db; /* Light gray */
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active, .slider-dot:hover {
+    background-color: #4f46e5; /* Your brand primary color */
+    width: 20px; /* Expands to look like a pill */
+    border-radius: 10px;
+}
+
+/* Navigation Arrows */
+.slider-nav-btn {
+    position: absolute;
+    top: 35%; /* Adjust based on image height */
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider-nav-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}

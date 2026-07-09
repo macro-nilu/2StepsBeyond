@@ -538,3 +538,55 @@ function openWhatsApp(trekName) {
     });
 });
 
+
+// pop up slider 
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll(".trek-slide");
+const dots = document.querySelectorAll(".slider-dot");
+const sliderWrapper = document.querySelector(".trek-slider-wrapper");
+
+// --- Core Slide Logic ---
+function changeSlide(index) {
+    if (index === currentSlideIndex) return;
+    
+    slides[currentSlideIndex].classList.remove("active");
+    dots[currentSlideIndex].classList.remove("active");
+    
+    currentSlideIndex = index;
+    
+    slides[currentSlideIndex].classList.add("active");
+    dots[currentSlideIndex].classList.add("active");
+}
+
+function nextSlide() {
+    let nextIndex = (currentSlideIndex + 1) % slides.length;
+    changeSlide(nextIndex);
+}
+
+function prevSlide() {
+    let prevIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+    changeSlide(prevIndex);
+}
+
+// --- Swipe Logic for Mobile ---
+let touchstartX = 0;
+let touchendX = 0;
+
+sliderWrapper.addEventListener('touchstart', (e) => {
+    touchstartX = e.changedTouches[0].screenX;
+});
+
+sliderWrapper.addEventListener('touchend', (e) => {
+    touchendX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeThreshold = 50; // Minimum pixel distance for a valid swipe
+    if (touchendX < touchstartX - swipeThreshold) {
+        nextSlide(); // Swiped left -> Next
+    }
+    if (touchendX > touchstartX + swipeThreshold) {
+        prevSlide(); // Swiped right -> Previous
+    }
+}

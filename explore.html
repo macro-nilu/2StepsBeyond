@@ -351,23 +351,15 @@ gtag('config', 'G-CVJD3Z7YGB');
 
                         <article class="card small-card">
                             <div class="card-img-wrapper">
-                                <img src="images/revealing_soon.webp" alt="Revealing Soon" class="card-img" loading="lazy" decoding="async">
-                                <div class="tags"><span class="tag tag-light">Stay Tuned</span></div>
+                                <img src="images/ratangad (1).webp" alt="Ratangad Fort" class="card-img" loading="lazy" decoding="async">
+                                <div class="tags"><span class="tag tag-light">Intermediate</span></div>
                             </div>
                             <div class="card-content">
-                                <h4>Revealing Soon...</h4>
-                                <p>🏔️ Secret Expedition
-
-Some trails are worth waiting for.
-
-A hidden adventure is taking shape beyond the horizon. New routes, fresh experiences, and unforgettable moments are on their way.
-
-Be among the first explorers to uncover what's next.
-
-Revealing Soon... ✨</p>
+                                <h4>Ratangad Fort</h4>
+                                <p>Venture into the heart of the Sahyadris with an unforgettable trek to Ratangad Fort, a 2,000-year-old hill fort renowned for its rugged beauty and timeless charm. Traverse scenic forest trails, climb ancient stone steps, and stand beneath the iconic Nedhe (natural rock window) overlooking endless mountain ranges. A perfect blend of history, wilderness, and adventure awaits every explorer. 🏔️🌿</p>
                                 <div class="card-footer small-footer">
                                     <span class="stats">Very Soon</span>
-                                    <button class="btn-circle-small" aria-label="View Details" onclick="openWhatsApp1('Very Soon')" onclick="trackEvent('view_details_from_past')">↗</button>
+                                    <button class="btn-circle-small" aria-label="View Details" onclick="openWhatsApp('Ratangad Fort')" onclick="trackEvent('view_details_from_past')">↗</button>
                                 </div>
                             </div>
                         </article>
@@ -541,6 +533,43 @@ Thanks."</p>
                         <div class="reviewer-info">
                             <h5>Omkar Satarshetty</h5>
                             <span>Consultant</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card card">
+                    <div class="review-text-wrap">
+                        <p class="review-text">"Had an amazing trek to Ratangad with 2StepBeyond.
+Everything was perfectly organized from planning to execution.
+The team is super chill, friendly, and very professional at the same time.
+They handle the entire group really well, making sure everyone feels safe, comfortable, and included.
+
+Truly a well-managed experience with great vibes throughout the trek.
+Highly recommended for anyone looking for a smooth, fun, and memorable trekking experience! 🌄
+Thank you guys all co-founders ❤️🫶🏻"</p>
+                    </div>
+                    <button class="btn-expand" onclick="toggleReview(this)">Read More</button>
+                    <div class="reviewer">
+                        <div class="reviewer-info">
+                            <h5>Rupesh patekar </h5>
+                            <span>Trekker</span>
+                        </div>
+                    </div>
+                </article>
+
+                 <article class="review-card card">
+                    <div class="review-text-wrap">
+                        <p class="review-text">"I would thank 2SB fam from my bottom of the heart for inviting me and providing me with such good hospitality and great culture. 
+Thank you to Rushi, Lakshya and Daky for hosting me. 
+Thank you to the rest of the participants whom i had such a wonderful time. Wasn’t a minute where i felt am meeting you guys for the first time. 
+Thank you so much for giving me such a good time. I am gonna make sure i pass on this positive review to rest of the mates in my knowns.
+All the best guys. 🫂💯✨"</p>
+                    </div>
+                    <button class="btn-expand" onclick="toggleReview(this)">Read More</button>
+                    <div class="reviewer">
+                        <div class="reviewer-info">
+                            <h5>Sumeet Paste</h5>
+                            <span>Content Creator</span>
                         </div>
                     </div>
                 </article>
@@ -728,25 +757,59 @@ At 2stepsbeyond, Suhani isn’t just leading treks. She’s helping build a comm
         </div>
     </footer>
 
-    <div id="trekPopupOverlay" class="premium-popup-overlay">
+   <div id="trekPopupOverlay" class="premium-popup-overlay">
     <div class="premium-popup-card">
         <button id="closePopup" class="popup-close-btn" aria-label="Close">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
         </button>
         
-        <div class="popup-img-wrapper">
-            <img src="next/ratangad.webp" alt="Upcoming Trek" loading="lazy" decoding="async" />
-            <div class="popup-tag">Upcoming Next</div>
-        </div>
-        
-        <div class="popup-content">
-            <h3 class="popup-title">Ratangad Fort</h3>
-            <p class="popup-subtitle">Disconnect to reconnect. Only limited seats available for our next Ratangad Fort expedition.<br><b>Group Discount Available.</b></p>
-            
-            <div class="popup-actions">
-                <button class="btn btn-primary w-full" onclick="openWhatsAppBook('Ratangad Fort trek')" onclick="trackEvent('book_from_pop-up')">Book Your seat</button>
-                <button class="btn btn-outline w-full" onclick="openWhatsAppDetails('Ratangad Fort trek')" onclick="trackEvent('get_details_from_pop-up')">Get Details</button>
+        <div class="trek-slider-wrapper">
+            <button class="slider-nav-btn prev-btn" onclick="prevSlide()" aria-label="Previous Trek">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+
+            <div class="trek-slide">
+                <div class="popup-img-wrapper">
+                    <img src="next/sondai.webp" alt="Sondai Fort Trek" loading="lazy" decoding="async" />
+                    <div class="popup-tag">Upcoming Next</div>
+                </div>
+                <div class="popup-content">
+                    <h3 class="popup-title">Sondai Fort</h3>
+                    <p class="popup-subtitle">Experience the magic of Sondai Fort & Changewadi Waterfall. Join our weekend batch now!<br><b>Early Bird Offer Active.</b></p>
+                    <div class="popup-actions">
+                        <button class="btn btn-primary w-full" onclick="openWhatsAppBook('Sondai Fort trek'); trackEvent('book_from_pop-up');">Book Your seat</button>
+                        <button class="btn btn-outline w-full" onclick="openWhatsAppDetails('Sondai Fort trek'); trackEvent('get_details_from_pop-up');">Get Details</button>
+                    </div>
+                </div>
             </div>
+
+            <div class="trek-slide active">
+                <div class="popup-img-wrapper">
+                    <img src="next/ratangad.webp" alt="Ratangad Fort Trek" loading="lazy" decoding="async" />
+                    <div class="popup-tag">Upcoming Next</div>
+                </div>
+                <div class="popup-content">
+                    <h3 class="popup-title">Ratangad Fort</h3>
+                    <p class="popup-subtitle">Disconnect to reconnect. Only limited seats available for our next expedition.<br><b>Group Discount Available.</b></p>
+                    <div class="popup-actions">
+                        <button class="btn btn-primary w-full" onclick="openWhatsAppBook('Ratangad Fort trek'); trackEvent('book_from_pop-up');">Book Your seat</button>
+                        <button class="btn btn-outline w-full" onclick="openWhatsAppDetails('Ratangad Fort trek'); trackEvent('get_details_from_pop-up');">Get Details</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <button class="slider-nav-btn next-btn" onclick="nextSlide()" aria-label="Next Trek">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+        </div>
+
+        <div class="slider-dots-container">
+            <span class="slider-dot active" onclick="changeSlide(0)"></span>
+            <span class="slider-dot" onclick="changeSlide(1)"></span>
         </div>
     </div>
 </div>
