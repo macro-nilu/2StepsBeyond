@@ -443,7 +443,7 @@ function scrollExpeditions(direction) {
 
 function openWhatsApp(trekName) {
         // Your target WhatsApp number
-        const phoneNumber = "919561636900"; 
+        const phoneNumber = "919226071635"; 
         
         // The dynamic message template
         const message = `Hi 2StepsBeyond, I want details regarding ${trekName} & upcoming batch for the same !`;
@@ -458,7 +458,7 @@ function openWhatsApp(trekName) {
 
     function openWhatsApp1(trekName) {
         // Your target WhatsApp number
-        const phoneNumber = "919561636900"; 
+        const phoneNumber = "919226071635"; 
         
         // The dynamic message template
         const message = `Hi 2StepsBeyond, I want details regarding upcoming batches!`;
@@ -473,7 +473,7 @@ function openWhatsApp(trekName) {
 
      function openWhatsAppBook(trekName) {
         // Your target WhatsApp number
-        const phoneNumber = "919561636900"; 
+        const phoneNumber = "919226071635"; 
         
         // The dynamic message template
         const message = `Hi 2StepsBeyond, I want to book a seat/seats for ${trekName}!`;
@@ -488,7 +488,7 @@ function openWhatsApp(trekName) {
 
      function openWhatsAppDetails(trekName) {
         // Your target WhatsApp number
-        const phoneNumber = "919561636900"; 
+        const phoneNumber = "919226071635"; 
         
         // The dynamic message template
         const message = `Hi 2StepsBeyond, I want details regarding upcoming ${trekName}!`;
